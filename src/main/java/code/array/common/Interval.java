@@ -11,8 +11,13 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 @AllArgsConstructor
-public class Interval {
-    public int start; //needed public to run in interviewbit
-    public int end; //needed public to run in interviewbit
+public class Interval implements Comparable<Interval>{
+    public Integer start; //needed public to run in interviewbit
+    public Integer end; //needed public to run in interviewbit
     Interval() { start = 0; end = 0; }
+
+    @Override
+    public int compareTo(Interval o) {
+        return start.compareTo(o.start);
+    }
 }
