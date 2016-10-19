@@ -26,7 +26,7 @@ public class WindowString {
         int start = 0;
         int resultStart = 0;
         int resultEnd = Integer.MAX_VALUE;
-        while (totalCount >0 && end < S.length()) {
+        while (end < S.length()) {
             while (totalCount >0 && end < S.length()) {
                 Character c = S.charAt(end);
                 Integer count = map.get(c);
@@ -44,7 +44,7 @@ public class WindowString {
                 end++;
             }
             //System.out.println("found result after end: " + counter + "start: " + start + " end: " + end);
-            while (start < end && totalCount ==0) {
+            while (totalCount ==0) {
                 Character c = S.charAt(start);
                 Integer count = map.get(c);
                 if (count != null) {
